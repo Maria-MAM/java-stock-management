@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="BBStorePU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action"
+                      value="create"/>
+            <property name="javax.persistence.schema-generation.create-source"
+                      value="script"/>
+            <property name="javax.persistence.schema-generation.create-script-source"
+                      value="META-INF/sql/initialSQLfile.sql"/>
+            <property name="hibernate.show_sql"
+                      value="true"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQL8Dialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>
